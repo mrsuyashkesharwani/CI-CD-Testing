@@ -30,6 +30,6 @@ jobs:
         run: pip install flask flask-mysql pytest
 
   Run-Test:
-    runs-on: ubuntu-lates
+    runs-on: ubuntu-latest
     steps:
       - run: pytest
