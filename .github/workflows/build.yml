@@ -27,3 +27,5 @@ jobs:
       - name: Install Python Dependencies
         run: pip install flask flask-mysql
 
+      - name: Run the web server
+        run: FLASK_APP=app.py flask run --host=0.0.0.0
