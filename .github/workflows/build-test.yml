@@ -7,20 +7,21 @@ on:
 jobs:
   build and test:
     runs-on: ubuntu-latest
-
   steps:
     - name: Checkout Code
       uses: actions/checkout@v4
-      
-    - name: Set up Python  
+
+    - name: Set up Python
       uses: actions/setup-python@v5
       with:
-        python-version: '3.13' 
+        python-version: '3.13'
 
     - name: Install Depedencies
       run: apt-get install -y python3 python3-setuptools python3-dev build-essential python3-pip default-libmysqlclient-dev
 
     - name: Build the Project
       run: pip install flask flask-mysql
+
+
 
 
