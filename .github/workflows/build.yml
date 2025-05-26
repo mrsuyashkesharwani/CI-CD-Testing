@@ -21,6 +21,7 @@ jobs:
 
   Install-System-Dependencies:
     runs-on: ubuntu-latest
+    needs: build-and-test
     steps:    
       - run: |
           sudo apt-get update
@@ -31,6 +32,6 @@ jobs:
 
   Run-Test:
     runs-on: ubuntu-latest
-    needs: Install-System-Dependencies
+    needs: [build-and-test, Install-System-Dependencies]
     steps:
       - run: pytest
