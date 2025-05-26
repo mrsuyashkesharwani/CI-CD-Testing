@@ -20,6 +20,7 @@ jobs:
           python-version: '3.11'
 
   Install System Dependencies:
+    runs-on: ubuntu-latest
     steps:    
       - run: |
           sudo apt-get update
@@ -29,5 +30,6 @@ jobs:
         run: pip install flask flask-mysql pytest
 
   Run Test:
+    runs-on: ubuntu-lates
     steps:
       - run: pytest
