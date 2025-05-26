@@ -19,13 +19,15 @@ jobs:
         with:
           python-version: '3.11'
 
-      - name: Install System Dependencies
-        run: |
+  Install System Dependencies:
+    steps:    
+      - run: |
           sudo apt-get update
           sudo apt-get install -y python3-dev build-essential default-libmysqlclient-dev
 
       - name: Install Python Dependencies
         run: pip install flask flask-mysql pytest
 
-      - name: Run Test
-        run: pytest
+  Run Test:
+    steps:
+      - run: pytest
